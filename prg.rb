@@ -86,3 +86,18 @@ puts "\n\n"
 # Dear Evaluator,
 # I completed all the required functions, however display function is not working fine
 # Please suggest how to rectify.
+
+# I am getting following output
+
+# My Todo-list
+
+# Overdue
+  #<Todo:0x000055e22d400cf8>
+
+# Due Today
+  #<Todo:0x000055e22d400ca8>
+  #<Todo:0x000055e22d400aa0>
+
+# Due Later
+ #<Todo:0x000055e22d400c80>
+ #<Todo:0x000055e22d400c58>
