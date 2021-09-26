@@ -8,7 +8,9 @@ class Todo
   end
 
   def to_displayable_string
-    return "[ ] #{@text} #{@due_date}\n"
+    display_status = @completed ? "[X]" : "[ ]"
+    display_date = duetoday? ? nil : @due_date
+    "#{display_status} #{@text} #{display_date}"
   end
 
   def overdue?
@@ -48,7 +50,7 @@ class TodosList
 
 
   def to_displayable_list
-    @todos.each { |todo| todo.to_displayable_string }
+    @todos.map { |todo| todo.to_displayable_string }
   end
 end
 
@@ -82,22 +84,3 @@ puts "\n\n"
 puts "Due Later\n"
 puts todos_list.due_later.to_displayable_list
 puts "\n\n"
-
-# Dear Evaluator,
-# I completed all the required functions, however display function is not working fine
-# Please suggest how to rectify.
-
-# I am getting following output
-
-# My Todo-list
-
-# Overdue
-  #<Todo:0x000055e22d400cf8>
-
-# Due Today
-  #<Todo:0x000055e22d400ca8>
-  #<Todo:0x000055e22d400aa0>
-
-# Due Later
- #<Todo:0x000055e22d400c80>
- #<Todo:0x000055e22d400c58>
